@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Dosis Estudio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>La Dosis Estudio</h1>
+            <img src="Icon-no-background.png" alt="Icono" class="icono">
+        </div>
+        <nav>
+            <input type="checkbox" id="menu-checkbox">
+            <label for="menu-checkbox" class="menu-icon">&#9776;</label>
+            <ul class="menu">
+                <li><a href="#mix-master" aria-label="Ir a la sección Mix & Master">Mix & Master</a></li>
+                <li><a href="#produccion-musical" aria-label="Ir a la sección Producción Musical">Producción Musical</a></li>
+                <li><a href="#asesoria-musical" aria-label="Ir a la sección Asesoría Musical">Asesoría Musical</a></li>
+                <li><a href="#grabacion-audio" aria-label="Ir a la sección Grabación de Audio">Grabación de Audio</a></li>
+                <li><a href="#turnos" aria-label="Ir a la sección Turnos">Turnos</a></li>
+                <li><a href="#contacto" aria-label="Ir a la sección Contacto">Contacto</a></li>
+                <li><a href="#portafolio" aria-label="Ir a la sección Portafolio">Portafolio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="mix-master" class="fade-in">
+            <h2><i class="fas fa-headphones-alt"></i> Mix & Master</h2>
+            <p>Obtén el mejor sonido profesional para tus pistas.</p>
+            <a href="https://wa.me/message/HGCDHIYGOZXMO1" class="button">Contratar Servicio</a>
+        </section>
+        <section id="produccion-musical" class="fade-in">
+            <h2><i class="fas fa-music"></i> Producción Musical</h2>
+            <p>Desde la idea inicial hasta la producción final.</p>
+            <a href="https://wa.me/message/HGCDHIYGOZXMO1" class="button">Contratar Servicio</a>
+        </section>
+        <section id="asesoria-musical" class="fade-in">
+            <h2><i class="fas fa-lightbulb"></i> Asesoría Musical</h2>
+            <p>Recibe consejos de expertos para mejorar tu música.</p>
+            <a href="https://wa.me/message/HGCDHIYGOZXMO1" class="button">Contratar Servicio</a>
+        </section>
+        <section id="grabacion-audio" class="fade-in">
+            <h2><i class="fas fa-microphone"></i> Grabación de Audio</h2>
+            <p>No disponible por el momento por trabajos de construcción 👷‍♂️</p>
+        </section>
+        <section id="turnos" class="fade-in">
+            <h2><i class="fas fa-calendar-alt"></i> Turnos</h2>
+            <p>Agenda tu turno para una sesión de estudio con nosotros.</p>
+            <a href="https://wa.me/message/HGCDHIYGOZXMO1" class="button">¡Agenda ya!</a>
+        </section>
+        <section id="portafolio" class="fade-in">
+            <h2><i class="fas fa-portfolio"></i> Portafolio</h2>
+            <div class="videos">
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/9o7hp3Zxarw?si=bPgbpoHrIum9srDB" frameborder="0" allowfullscreen></iframe>
+                    <p>FreeStyle-Pablo Brito/Produccion, Mix & Master.</p>
+                </div>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/ZjzFWia5x6Q?si=CjWic6a8T2SlnzFw" frameborder="0" allowfullscreen></iframe>
+                    <p>Jessimar/Escandalo Records-Na Que Ver /Participación.</p>
+                </div>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/EWP3cOpdG_A?si=14KLH40E9wbH6SN0" frameborder="0" allowfullscreen></iframe>
+                    <p>Chivao-Ja Rulay/Participación.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contacto" class="fade-in">
+            <h2>Contacto</h2>
+            <form action="https://formspree.io/f/xwpkeeve" method="POST">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="_replyto" required>
+                
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="social-buttons">
+            <a href="https://www.instagram.com/wr9music" target="_blank" aria-label="Visitar Instagram de La Dosis Estudio">
+                <img src="3721672-instagram_108066 (2).png" alt="Instagram">
+            </a>
+            <a href="https://www.youtube.com/ladosisstudio" target="_blank" aria-label="Visitar YouTube de La Dosis Estudio">
+                <img src="Youtube_icon-icons.com_66802 (2).png" alt="YouTube">
+            </a>
+        </div>
+        <p>&copy; 2024 La Dosis Estudio. Todos los derechos reservados.</p>
+        <img src="Monografia.png" alt="Logo pequeño" class="footer-logo">
+    </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const faders = document.querySelectorAll('.fade-in');
+        const options = {
+            threshold: 0.5,
+            rootMargin: "0px 0px -100px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    });
+    </script>
+</body>
+</html>
